@@ -1,0 +1,50 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
+  <f:entry title="Webhook URL" field="webhookUrl">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Avatar URL" field="avatar">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Username" field="username">
+    <f:textbox default="Jenkins" />
+  </f:entry>
+  <f:entry title="Show commits" field="showCommits">
+    <f:checkbox default="true" />
+  </f:entry>
+  <f:entry title="Footer Timestamp" field="footerTimestamp">
+    <f:checkbox default="true" />
+  </f:entry>
+  <f:advanced>
+    <f:entry title="Title Icon URL" field="titleIcon">
+      <f:textbox />
+    </f:entry>
+    <f:entry title="Title Text" field="titleText">
+      <f:textbox default="New build of {project-name} is ready!" />
+    </f:entry>
+    <f:entry title="Description Body" field="description">
+      <f:textbox default="**Build:** {build-number}\n**Status:** {build-result}\n" />
+    </f:entry>
+    <f:entry title="Commit Header" field="commitHeader">
+      <f:textbox default="**[`{commit-hash}`]({commit-url})** - {author-username}" />
+    </f:entry>
+    <f:entry title="Commit Header No Links" field="commitHeaderFallback">
+      <f:textbox default="**`{commit-hash}`** - {author-username}" />
+    </f:entry>
+    <f:entry title="Commit Body" field="commitBody">
+      <f:textbox default="- {commit-message}" />
+    </f:entry>
+    <f:entry title="Footer Icon URL" field="footerIcon">
+      <f:textbox />
+    </f:entry>
+    <f:entry title="Footer Text" field="footerText">
+      <f:textbox default="Built at" />
+    </f:entry>
+    <f:entry title="Thumbnail URL" field="thumbnail">
+      <f:textbox />
+    </f:entry>
+    <f:entry title="Image URL" field="image">
+      <f:textbox />
+    </f:entry>
+  </f:advanced>
+</j:jelly>

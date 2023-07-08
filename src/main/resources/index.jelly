@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Discord Status allows you to send Discord embeds about your builds via Discord's webhooks.
+</div>
